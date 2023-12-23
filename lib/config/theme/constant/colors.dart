@@ -5,6 +5,7 @@ class ExColors {
   static const Color transparent = Colors.transparent;
 
   static const Color white = Colors.white;
+  static const Color doctorWhite = Color(0xfff8f8f8);
 
   static const Color black = Colors.black;
 
@@ -356,7 +357,7 @@ class ExColors {
     },
   );
 
-  static const int _malinkaValue = 0xFFFD3D21;
+  static const int _malinkaValue = 0xFFF74861;
   static const MaterialColor malinka = MaterialColor(
     _malinkaValue,
     <int, Color>{

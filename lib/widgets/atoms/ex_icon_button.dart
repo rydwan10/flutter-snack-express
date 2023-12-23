@@ -26,6 +26,7 @@ class ExIconButton extends StatelessWidget {
   final Color? splashColor;
   final double? splashRadius;
   final String? tooltip;
+  final BoxDecoration? boxDecoration;
 
   const ExIconButton({
     Key? key,
@@ -52,41 +53,45 @@ class ExIconButton extends StatelessWidget {
     this.splashColor,
     this.splashRadius,
     this.tooltip,
+    this.boxDecoration,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-      key: key,
-      icon: isLoading ? ExLoadingIndicator() : icon,
-      onPressed: isLoading ? null : onPressed,
-      iconSize: iconSize,
-      focusNode: focusNode,
-      autofocus: autofocus,
-      style: buttonStyle,
-      color: color,
-      constraints: constraints,
-      padding: padding,
-      visualDensity: visualDensity,
-      alignment: alignment,
-      disabledColor: disabledColor,
-      enableFeedback: enableFeedback,
-      focusColor: focusColor,
-      highlightColor: highlightColor,
-      hoverColor: hoverColor,
-      isSelected: isSelected,
-      mouseCursor: mouseCursor,
-      selectedIcon: selectedIcon,
-      splashColor: splashColor,
-      splashRadius: splashRadius,
-      tooltip: tooltip,
+    return Container(
+      decoration: boxDecoration,
+      child: IconButton(
+        key: key,
+        icon: isLoading ? const ExLoadingIndicator() : icon,
+        onPressed: isLoading ? null : onPressed,
+        iconSize: iconSize,
+        focusNode: focusNode,
+        autofocus: autofocus,
+        style: buttonStyle,
+        color: color,
+        constraints: constraints,
+        padding: padding,
+        visualDensity: visualDensity,
+        alignment: alignment,
+        disabledColor: disabledColor,
+        enableFeedback: enableFeedback,
+        focusColor: focusColor,
+        highlightColor: highlightColor,
+        hoverColor: hoverColor,
+        isSelected: isSelected,
+        mouseCursor: mouseCursor,
+        selectedIcon: selectedIcon,
+        splashColor: splashColor,
+        splashRadius: splashRadius,
+        tooltip: tooltip,
+      ),
     );
   }
 
   factory ExIconButton.back({VoidCallback? onBack, Color? color}) {
     return ExIconButton(
       icon: Icon(
-        Icons.arrow_back,
+        Icons.arrow_back_ios_new_rounded,
         color: color,
       ),
       onPressed: () {
@@ -101,7 +106,7 @@ class ExIconButton extends StatelessWidget {
 
   factory ExIconButton.close({VoidCallback? onBack}) {
     return ExIconButton(
-      icon: Icon(Icons.close),
+      icon: const Icon(Icons.close),
       onPressed: () {
         onBack?.call();
         Navigate.back();

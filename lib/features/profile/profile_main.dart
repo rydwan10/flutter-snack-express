@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snack_express/features/profile/profile_screen.dart';
 
 class ProfileMain extends StatefulWidget {
   const ProfileMain({Key? key}) : super(key: key);
@@ -10,6 +11,6 @@ class ProfileMain extends StatefulWidget {
 class _ProfileMainState extends State<ProfileMain> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Profile Main"));
+    return ProfileScreen();
   }
 }

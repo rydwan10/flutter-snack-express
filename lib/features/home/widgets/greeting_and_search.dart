@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:snack_express/utils/extensions/context_ext.dart';
 
 class GreetingAndSearch extends StatelessWidget {
@@ -15,25 +16,26 @@ class GreetingAndSearch extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Hello Azalea 👋",
-                style: context.exTextTheme.titleLarge?.copyWith(
+                "🚚 SnackExpress",
+                style: context.exTextTheme.headlineSmall?.copyWith(
                   fontWeight: FontWeight.w600,
                 ),
               ),
               const SizedBox(height: 8),
               Text(
-                "It's lunch time!",
-                style: context.exTextTheme.titleSmall?.copyWith(
+                "Welcome back, Rydwan!",
+                style: context.exTextTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.w600,
                 ),
               )
             ],
           ),
           // TODO change to hero icons
-          Icon(
-            Icons.search,
-            color: context.exColor.icon.main,
-          ),
+          SvgPicture.asset(context.exImages.svg.icSearch,
+              colorFilter: const ColorFilter.mode(
+                Colors.black,
+                BlendMode.srcIn,
+              ))
         ],
       ),
     );

@@ -12,4 +12,8 @@ class ExVectors {
       "assets/svg/shopping-bag-outline.svg";
   static const String icProfile = "assets/svg/profile.svg";
   static const String icProfileOutline = "assets/svg/profile-outline.svg";
+
+  static const String icSearch = "assets/svg/search.svg";
+  static const String icMapPin = "assets/svg/map-pin.svg";
+  static const String icCartOutline = "assets/svg/shopping-cart-outline.svg";
 }

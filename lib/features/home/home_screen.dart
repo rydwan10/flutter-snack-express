@@ -3,6 +3,7 @@ import 'package:snack_express/features/home/widgets/category.dart';
 import 'package:snack_express/features/home/widgets/delivery_address.dart';
 import 'package:snack_express/features/home/widgets/greeting_and_search.dart';
 import 'package:snack_express/features/home/widgets/most_popular.dart';
+import 'package:snack_express/features/home/widgets/promotion.dart';
 import 'package:snack_express/widgets/templates/ex_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,6 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
             Category(),
             SizedBox(height: 24),
             MostPopular(),
+            SizedBox(height: 24),
+            Promotion(),
+            SizedBox(height: 24),
           ],
         ),
       ),

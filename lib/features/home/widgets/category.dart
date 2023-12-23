@@ -14,14 +14,14 @@ class Category extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Category",
-                style: context.exTextTheme.titleSmall?.copyWith(
+                "Kategori",
+                style: context.exTextTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.w600,
                 ),
               ),
               Text(
-                "See All",
-                style: context.exTextTheme.labelSmall?.copyWith(
+                "Lihat semua",
+                style: context.exTextTheme.bodySmall?.copyWith(
                   fontWeight: FontWeight.w600,
                   color: Colors.red,
                 ),
@@ -91,7 +91,7 @@ class _CategoryItem extends StatelessWidget {
         height: 80,
         padding: const EdgeInsets.only(left: 12, top: 12),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(18),
+          borderRadius: BorderRadius.circular(12),
           color: backgroundColor,
         ),
         child: Stack(

@@ -622,7 +622,7 @@ class ExThemeBackgroundColors extends BaseData {
 
   factory ExThemeBackgroundColors.light() {
     return ExThemeBackgroundColors(
-      main: ExColors.white,
+      main: ExColors.doctorWhite,
       base: ExColors.white,
       scaffold: ExColors.white,
       container: ExColors.greyF1F5F8,
@@ -1994,15 +1994,15 @@ class ExThemeActionColors extends BaseData {
   });
 
   factory ExThemeActionColors.light() => ExThemeActionColors(
-        primary: ExThemeMaterialColors.light().teal.shade500,
-        secondary: ExThemeMaterialColors.light().purple.shade400,
+        primary: ExThemeMaterialColors.light().dynamite.shade500,
+        secondary: ExThemeMaterialColors.light().malinka.shade400,
         disabled: ExThemeMaterialColors.light().gray.shade100,
         danger: ExThemeMaterialColors.light().error.shade400,
       );
 
   factory ExThemeActionColors.dark() => ExThemeActionColors(
-        primary: ExThemeMaterialColors.dark().teal.shade400,
-        secondary: ExThemeMaterialColors.dark().purple.shade400,
+        primary: ExThemeMaterialColors.dark().dynamite.shade400,
+        secondary: ExThemeMaterialColors.dark().malinka.shade400,
         disabled: ExThemeMaterialColors.dark().gray.shade100,
         danger: ExThemeMaterialColors.dark().error.shade400,
       );

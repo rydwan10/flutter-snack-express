@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:snack_express/config/theme/constant/colors.dart';
 import 'package:snack_express/utils/extensions/context_ext.dart';
 
 class DeliveryAddress extends StatelessWidget {
@@ -9,25 +11,37 @@ class DeliveryAddress extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 24),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 12,
+        ),
         decoration: BoxDecoration(
-          color: context.exColor.background.container,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(
+            color: ExColors.dynamite.shade500,
+          ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               children: [
-                const Icon(Icons.pin_drop, color: Colors.yellow),
+                SvgPicture.asset(
+                  context.exImages.svg.icMapPin,
+                  colorFilter: ColorFilter.mode(
+                    ExColors.dynamite.shade500,
+                    BlendMode.srcIn,
+                  ),
+                ),
                 const SizedBox(width: 8),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Your delivery address",
-                      style: context.exTextTheme.labelSmall?.copyWith(
-                        color: context.exColor.text.additional,
+                      "Antar ke Rumah 🏠",
+                      style: context.exTextTheme.titleMedium?.copyWith(
+                        color: context.exColor.text.main,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                     const SizedBox(height: 4),

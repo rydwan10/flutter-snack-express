@@ -28,18 +28,48 @@ class ExThemeImages extends BaseData {
 }
 
 class ExThemeImagesSvg extends BaseData {
-  ExThemeImagesSvg();
+  final String icSearch;
+  final String icFavorite;
+  final String icFavoriteOutline;
+  final String icMapPin;
+  final String icCartOutline;
+
+  ExThemeImagesSvg({
+    required this.icSearch,
+    required this.icFavorite,
+    required this.icFavoriteOutline,
+    required this.icMapPin,
+    required this.icCartOutline,
+  });
 
   factory ExThemeImagesSvg.light() {
-    return ExThemeImagesSvg();
+    return ExThemeImagesSvg(
+      icSearch: ExVectors.icSearch,
+      icFavorite: ExVectors.icFavorite,
+      icFavoriteOutline: ExVectors.icFavoriteOutline,
+      icMapPin: ExVectors.icMapPin,
+      icCartOutline: ExVectors.icCartOutline,
+    );
   }
 
   factory ExThemeImagesSvg.dark() {
-    return ExThemeImagesSvg();
+    return ExThemeImagesSvg(
+      icSearch: ExVectors.icSearch,
+      icFavorite: ExVectors.icFavorite,
+      icFavoriteOutline: ExVectors.icFavoriteOutline,
+      icMapPin: ExVectors.icMapPin,
+      icCartOutline: ExVectors.icCartOutline,
+    );
   }
 
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [
+        icSearch,
+        icFavorite,
+        icFavoriteOutline,
+        icMapPin,
+        icCartOutline,
+      ];
 }
 
 class ExThemeImagesPng extends BaseData {

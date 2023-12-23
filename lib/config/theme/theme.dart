@@ -2,6 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:snack_express/base/data.dart';
 import 'package:snack_express/config/theme/constant/colors.dart';
+import 'package:snack_express/config/theme/constant/vector.dart';
 import 'package:snack_express/constants/font_size.dart';
 import 'package:snack_express/utils/extensions/color_ext.dart';
 
@@ -127,7 +128,7 @@ class ExTheme extends Equatable {
     return themeData.copyWith(
       // dividerColor: colors.singles.divider,
       // disabledColor: colors.button.disabled,
-      // scaffoldBackgroundColor: colors.background.main,
+      scaffoldBackgroundColor: colors.background.main,
       // dialogBackgroundColor: colors.background.dialog,
       // shadowColor: colors.shadow.main,
       // unselectedWidgetColor: colors.icon.unselected,
@@ -181,7 +182,7 @@ class ExTheme extends Equatable {
           disabledForegroundColor: colors.actionColors.disabled,
           disabledBackgroundColor: colors.actionColors.disabled,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(100),
+            borderRadius: BorderRadius.circular(12),
           ),
           padding: EdgeInsets.symmetric(horizontal: 24),
           elevation: 0,
@@ -195,7 +196,7 @@ class ExTheme extends Equatable {
           disabledForegroundColor: colors.actionColors.disabled,
           disabledBackgroundColor: colors.actionColors.disabled,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(100),
+            borderRadius: BorderRadius.circular(12),
           ),
           textStyle: textStyles.textTheme.labelLarge?.copyWith(
             color: colors.actionColors.primary,

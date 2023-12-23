@@ -19,9 +19,9 @@ class PreferencesThemeCubit extends HydratedCubit<PreferencesTheme> {
       ),
     );
     if (state.theme.isDarkMode) {
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
-    } else {
       SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
+    } else {
+      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     }
   }
 
